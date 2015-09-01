@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-    var url = 'https://www.best-biss.com/';
+    var url = 'http://ndb.nal.usda.gov/ndb/foods/show/9?fg=&man=&lfacet=&count=&max=35&sort=&qlookup=01009&offset=&format=Full&new=&measureby=';
     $.ajax({
         url: url,
+        crossOrigin: true,
         method: 'GET',
         success: function(res){
             console.log(res);
@@ -10,8 +11,6 @@ $(document).ready(function(){
         fail: function(res){
             console.log(res);
         }
-    }).done(function(res){
-        console.log(res);
     });
 
     //// Using XMLHttpRequest
