@@ -16,7 +16,7 @@ $(document).ready(function(){
     // Using XMLHttpRequest
     var xhr = new XMLHttpRequest();
     xhr.open("GET", 'http://ndb.nal.usda.gov/ndb/foods/show/9?fg=&man=&lfacet=&count=&max=35&sort=&qlookup=01009&offset=&format=Full&new=&measureby=', true);
-    xhr.setRequestHeader("http://fiteat-nuts.herokuapp.com/", "some value");
+    xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
     xhr.onload = function () {
         console.log(xhr.responseText);
     };
