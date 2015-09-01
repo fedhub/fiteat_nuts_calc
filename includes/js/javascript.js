@@ -10,6 +10,8 @@ $(document).ready(function(){
         fail: function(res){
             console.log(res);
         }
+    }).done(function(res){
+        console.log(res);
     });
 
     //// Using XMLHttpRequest
