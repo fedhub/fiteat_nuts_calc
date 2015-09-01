@@ -21,6 +21,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(require('./mysql'));
+app.use(require('./routers'));
 
 var port = process.env.PORT || 3000;
 server.listen(port, function(){

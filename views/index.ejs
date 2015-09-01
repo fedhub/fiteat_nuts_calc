@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="utf-8" />
+    <title>Fiteat nutrients calculator</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js" data-semver="1.0.7"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+</head>
+<body>
+<div id="main" ng-controller="main">
+
+    <form id="rests" ng-submit="rest_selected()">
+        <p>Choose Restaurant:</p>
+        <select>
+            <% for(var i in rests) { %>
+                <option value="<%= rests[i].id %>"><%= rests[i].english %></option>
+            <% } %>
+        </select>
+        <input type="submit" value="Apply"/>
+    </form>
+
+    <br/><br/>
+    <form id="menu-types" ng-submit="menu_type_selected()">
+        <p>Choose Menu Type:</p>
+        <select>
+            <option ng-repeat="menu_type in menu_types" value="{{ menu_type.id }}">{{ menu_type.english }}</option>
+        </select>
+        <input type="submit" value="Apply"/>
+    </form>
+
+    <br/><br/>
+    <form id="food-items" ng-submit="food_item_selected()">
+        <p>Choose Food Item:</p>
+        <select>
+            <option ng-repeat="food_item in food_items" value="{{ food_item.id }}">{{ food_item.english }}</option>
+        </select>
+        <input type="submit" value="Apply"/>
+    </form>
+
+    <br/><br/>
+    <form class="addition-set" id="{{ set.english }}-set" ng-repeat="set in sets">
+        <p style="font-weight: bold;">{{ set.english }}</p>
+        <div ng-repeat="component in set.components"><input type="checkbox" value="{{ component.english }}">{{ component.english }}</div>
+    </form>
+
+</div>
+</body>
+</html>
