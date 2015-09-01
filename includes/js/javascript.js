@@ -3,7 +3,7 @@ $(document).ready(function(){
     var url = 'https://ndb.nal.usda.gov/ndb/foods/show/9?fg=&man=&lfacet=&count=&max=35&sort=&qlookup=01009&offset=&format=Full&new=&measureby=';
     $.ajax({
         url: url,
-        method: 'POST',
+        method: 'GET',
         success: function(res){
             console.log(res);
         },
