@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var url = 'https://ndb.nal.usda.gov/ndb/foods/show/9?fg=&man=&lfacet=&count=&max=35&sort=&qlookup=01009&offset=&format=Full&new=&measureby=';
+    var url = 'http://ndb.nal.usda.gov/ndb/foods/show/9?fg=&man=&lfacet=&count=&max=35&sort=&qlookup=01009&offset=&format=Full&new=&measureby=';
     $.ajax({
         url: url,
         method: 'GET',
@@ -22,4 +22,27 @@ $(document).ready(function(){
     //    console.log(xhr.responseText);
     //};
     //xhr.send();
+
+    //var data = "";
+    //url = "http://www.example.com/page.html"
+    //var xhr = new XMLHttpRequest();
+    //xhr.open("GET", url, true);
+    //xhr.onreadystatechange = function() {
+    //    if (xhr.readyState == 4){
+    //        data = xhr.responseText
+    //    }
+    //}
+    //xhr.send();
+    //
+    //function process(){
+    //    url = "http://www.example.com/page.html"
+    //    var xhr = new XMLHttpRequest();
+    //    xhr.open("GET", url, true);
+    //    xhr.onreadystatechange = function() {
+    //        if (xhr.readyState == 4){
+    //            alert(xhr.responseText)
+    //        }
+    //    }
+    //    xhr.send();
+    //}
 });
