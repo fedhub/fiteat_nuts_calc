@@ -17,6 +17,10 @@ $(document).ready(function(){
     var xhr = new XMLHttpRequest();
     xhr.open("GET", 'http://ndb.nal.usda.gov/ndb/foods/show/9?fg=&man=&lfacet=&count=&max=35&sort=&qlookup=01009&offset=&format=Full&new=&measureby=', true);
     xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.setRequestHeader("Access-Control-Allow-Headers", "X-Requested-With");
+    xhr.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
+    xhr.setRequestHeader("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
     xhr.onload = function () {
         console.log(xhr.responseText);
     };
